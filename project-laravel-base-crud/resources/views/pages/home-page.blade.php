@@ -6,7 +6,18 @@
             MAIN
         </h2>
         <div>
-            
+            <ul>
+                @foreach ($arrayDevices as $item)
+                    <li>
+                        <a href="{{route('rotta-show', $item -> id)}}">
+                            Name: {{$item -> name}}; 
+                            Model: {{$item -> model}}
+                        </a>
+                    </li>
+                    <br>
+                @endforeach
+
+            </ul>
         </div>
     </main>
 
