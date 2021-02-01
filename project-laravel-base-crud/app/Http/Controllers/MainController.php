@@ -19,4 +19,8 @@ class MainController extends Controller
         // dd($arrayDevices);
         return view('pages.device-page', compact('arrayDevice'));
     }
+
+    public function create() {
+        return view('pages.input-page');
+    }
 }

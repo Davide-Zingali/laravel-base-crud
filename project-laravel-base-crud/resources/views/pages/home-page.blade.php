@@ -5,6 +5,9 @@
         <h2>
             MAIN
         </h2>
+        <a href="{{route('rotta-create')}}">
+            Add Element
+        </a>
         <div>
             <ul>
                 @foreach ($arrayDevices as $item)
