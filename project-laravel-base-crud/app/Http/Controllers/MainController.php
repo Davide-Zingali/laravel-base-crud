@@ -23,4 +23,17 @@ class MainController extends Controller
     public function create() {
         return view('pages.input-page');
     }
+
+    public function store(Request $request) {
+        // dd($request -> all());
+        
+        $newDevice = new Device;
+        $newDevice -> name = $request -> get('name');
+        $newDevice -> price = $request -> get('price');
+        $newDevice -> model = $request -> get('model');
+        $newDevice -> consumption = $request -> get('consumption');
+        $newDevice -> save();
+
+        return redirect() -> route('rotta-index');
+    }
 }
